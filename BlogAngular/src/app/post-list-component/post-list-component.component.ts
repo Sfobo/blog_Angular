@@ -12,4 +12,10 @@ export class PostListComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  post: {
+    title: string,
+    content: string,
+    loveIts: number,
+    created_at: Date
+  }
 }
