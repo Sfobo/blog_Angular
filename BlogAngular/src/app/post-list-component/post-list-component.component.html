@@ -1,9 +1,9 @@
 <li class="list-group-item">
   <div class="alert alert-success" role="alert"
-    *ngIf="loveIts > 0">
-    <p style="text-align:right">{{created_at | date: 'dd/MM/yyyy'}}</p>
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
+    *ngIf="post.loveIts > 0">
+    <p style="text-align:right">{{post.created_at | date: 'dd/MM/yyyy'}}</p>
+    <h4>{{post.title}}</h4>
+    <p>{{post.content}}</p>
     <div class="btn-group">
     <button type="button" class="btn btn-success"
       (click)="like()">
@@ -18,10 +18,10 @@
     </div>
   </div>
   <div class="alert alert-danger" role="alert"
-    *ngIf="loveIts < 0">
-    <p style="text-align:right">{{created_at | date: 'dd/MM/yyyy'}}</p>
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
+    *ngIf="post.loveIts < 0">
+    <p style="text-align:right">{{post.created_at | date: 'dd/MM/yyyy'}}</p>
+    <h4>{{post.title}}</h4>
+    <p>{{post.content}}</p>
     <div class="btn-group">
     <button type="button" class="btn btn-success"
       (click)="like()">
@@ -35,10 +35,10 @@
     </button>
     </div>
   </div>
-  <div class="alert" role="alert" *ngIf="loveIts === 0">
-    <p style="text-align:right">{{created_at | date: 'dd/MM/yyyy'}}</p>
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
+  <div class="alert" role="alert" *ngIf="post.loveIts === 0">
+    <p style="text-align:right">{{post.created_at | date: 'dd/MM/yyyy'}}</p>
+    <h4>{{post.title}}</h4>
+    <p>{{post.content}}</p>
     <div class="btn-group">
     <button type="button" class="btn btn-success"
       (click)="like()">
